@@ -37,6 +37,9 @@ describe('testObject test', () => {
     test('BUTTON click working properly', () => {
         // sprawdź czy po kliknięciu w BUTTON
         // ustawiana jest klasa 'clicked' na elemencie DIV
+        btn.click();
+        const div = element.querySelector('.clicked');
+        expect(div).toBeTruthy();
     });
 
     test('api() returns expected data', () => {
