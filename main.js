@@ -45,6 +45,9 @@ var testObject = (function () {
     }
 
     function _checkArrayValues() {
+        return _myArray.filter((elem) => {
+            return elem > 4;
+        });
         // Funkcja zwraca tylko te elementy tablicy _myArray, które są większe od 4.
     }
 
