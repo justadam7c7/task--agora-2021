@@ -9,6 +9,22 @@ var testObject = (function () {
     function createHTML(user) {
         const jsdom = require('jsdom');
         const {JSDOM} = jsdom;
+        let dom = new JSDOM("<!doctype html><html><body></body></html>");
+        global.window = dom.window;
+        global.document = dom.window.document;
+        global.navigator = global.window.navigator;
+        const newDiv = document.createElement('div');
+        document.body.appendChild(newDiv);
+        const newSpan = document.createElement('span');
+        const newButton = document.createElement('button');
+        newDiv.appendChild(newSpan);
+        newDiv.appendChild(newButton);
+        newSpan.textContent = `Użytkownik ${user}`;
+        newDiv.className = 'userTest';
+        newButton.addEventListener('click', () => {
+            newDiv.className = 'clicked';
+        });
+        return document;
         // Ta funkcja bedzie zwracała dynamicznie stworzony element DIV.
         // Będzie on wewnątrz zawierał elementy SPAN oraz BUTTON.
         // Po kliknięciu w BUTTON, dla elementu DIV będzie ustawiana klasa 'clicked'.
