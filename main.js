@@ -52,6 +52,9 @@ var testObject = (function () {
     }
 
     function _changeArrayStructure(arr) {
+        return arr.map(x => {
+            return {item: x};
+        });
         // Funkcja przyjmuje tablicę cyfr jako argument i zwraca jej zmienioną strukturę.
         // Struktura ma wyglądać następująco: { item: INDEKS_1, item: INDEKS_2, itd. }
     }
