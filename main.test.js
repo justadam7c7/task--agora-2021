@@ -43,6 +43,7 @@ describe('testObject test', () => {
     });
 
     test('api() returns expected data', () => {
+        return expect(main.api()).resolves.toHaveProperty('status', 200);
         // DLA CHĘTNYCH
         // Sprawdź czy funkcja api() zwraca oczekiwane dane: {status: 200}
         // Możesz włączyć test, zmieniając słowo 'xtest' na 'test'
