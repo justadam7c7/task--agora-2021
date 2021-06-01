@@ -16,6 +16,10 @@ describe('testObject test', () => {
     test('createHTML() return proper HTML structure', () => {
         // sprawdź czy funkcja createHTML() zwraca element DIV
         // i czy zawiera on elementy SPAN i BUTTON
+        const div = element.querySelector('div');
+        expect(div).toBeTruthy();
+        expect(div.querySelector('span')).toBeTruthy();
+        expect(div.querySelector('button')).toBeTruthy();
     });
 
     test('DIV element has set proper class', () => {
