@@ -31,6 +31,7 @@ describe('testObject test', () => {
     test('SPAN element has set proper text', () => {
         // sprawdź czy element SPAN zawiera tekst
         // `Użytkownik: YOUR_NAME` - gdzie YOUR_NAME to Twoje imię i nazwisko
+        expect(span.textContent).toContain('Użytkownik Justyna Adamczyk');
     });
 
     test('BUTTON click working properly', () => {
