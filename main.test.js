@@ -24,6 +24,8 @@ describe('testObject test', () => {
 
     test('DIV element has set proper class', () => {
         // sprawdź czy element DIV ma ustawioną klasę 'userTest'
+        const div = element.querySelector('.userTest');
+        expect(div).toBeTruthy();
     });
 
     test('SPAN element has set proper text', () => {
